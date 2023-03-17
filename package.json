@@ -1,0 +1,18 @@
+{
+  "name": "placementcell",
+  "version": "1.0.0",
+  "description": "Placement Cell App showing student data for interviews",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Mayuresh Attarde",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
+    "mongoose": "^7.0.2"
+  }
+}

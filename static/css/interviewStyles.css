@@ -1,0 +1,32 @@
+.hidden{
+    display: none;
+}
+
+.active{
+    display: block;
+}
+
+.overflow{
+    overflow: scroll;
+}
+
+.overflow::-webkit-scrollbar{
+    display: none;
+}
+
+button{
+    background-color: rgb(255, 72, 0) !important;
+    color: white !important;
+}
+
+button:hover{
+    background-color: rgb(239, 54, 3) !important;
+}
+
+label{
+    color: rgb(1, 1, 102);
+}
+
+h1{
+    color: rgb(1, 1, 102);
+}

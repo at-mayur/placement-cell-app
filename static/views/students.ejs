@@ -1,0 +1,152 @@
+
+<link rel="stylesheet" href="/css/studentStyles.css">
+
+<div class="container">
+
+    <div class="row g-2">
+
+        <div class="col-10 col-md-5 col-lg-4 mx-auto">
+
+            <div class="bg-white p-2 rounded-4 overflow" style="height: 85vh;">
+                <h1 class="mt-4 mb-3 text-center">Add Student</h1>
+
+                <form action="" class="fs-6" method="post">
+                    <div class="mt-3">
+                        <label class="form-label" for="stud-name">Name</label>
+                        <input type="text" id="stud-name" name="studName" class="form-control">
+                    </div>
+
+                    <div class="mt-3">
+                        <label class="form-label" for="stud-clg">College</label>
+                        <input type="text" id="stud-clg" name="studClg" class="form-control">
+                    </div>
+
+                    <div class="mt-3">
+                        <label class="form-label" for="stud-batch">Batch</label>
+                        <select id="stud-batch" name="studBatch" class="form-select">
+                            <option value="batch-1">Batch 1</option>
+                            <option value="batch-2">Batch 2</option>
+                            <option value="batch-3">Batch 3</option>
+                        </select>
+                    </div>
+
+                    <div class="mt-3">
+                        <label class="form-label" for="stud-dsa">DSA Score</label>
+                        <input type="number" id="stud-dsa" name="studDsa" class="form-control">
+                    </div>
+
+                    <div class="mt-3">
+                        <label class="form-label" for="stud-webd">WebD Score</label>
+                        <input type="number" id="stud-webd" name="studWebd" class="form-control">
+                    </div>
+
+                    <div class="mt-3">
+                        <label class="form-label" for="stud-react">React Score</label>
+                        <input type="number" id="stud-react" name="studReact" class="form-control">
+                    </div>
+
+                    <div class="mt-3">
+                        <label class="form-label" for="stud-status">Status</label>
+                        <select id="stud-status" name="studStatus" class="form-select">
+                            <option value="placed">Placed</option>
+                            <option value="not-placed">Not Placed</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn fs-4 mt-3 d-block mx-auto">Add Student</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="col-10 col-md-7 col-lg-8 mx-auto">
+
+            <div class="p-2 bg-white rounded-4 overflow" style="height: 85vh;">
+                <div class="text-bg-light rounded-2">
+                    <div class="d-flex justify-content-between align-items-center p-2">
+                        <div>
+                            <h4>Batch 1</h4>
+                            <h6 class="text-secondary">12 Jul, 2022</h6>
+                        </div>
+                        <div id="students-batch-expand" class="me-2">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                        <div id="students-batch-collapse" class="me-2 hidden">
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                    </div>
+                    <div id="students-batch" class="hidden p-1">
+
+                        <div class="p-2 border-bottom border-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6>Mayank Agrawal</h6>
+                                    <p>NIT, Nagpur</p>
+                                </div>
+                                <p>
+                                    Status:
+                                    <span>Placed</span>
+                                </p>
+                            </div>
+                            <div>
+                                <span>DSA: 98%</span>
+                                <span class="mx-3">|</span>
+                                <span>WebD: 98%</span>
+                                <span class="mx-3">|</span>
+                                <span>React: 98%</span>
+                            </div>
+                        </div>
+
+                        <div class="p-2 border-bottom border-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6>Mayank Agrawal</h6>
+                                    <p>NIT, Nagpur</p>
+                                </div>
+                                <p>
+                                    Status:
+                                    <span>Placed</span>
+                                </p>
+                            </div>
+                            <div>
+                                <span>DSA: 98%</span>
+                                <span class="mx-3">|</span>
+                                <span>WebD: 98%</span>
+                                <span class="mx-3">|</span>
+                                <span>React: 98%</span>
+                            </div>
+                        </div>
+
+                        <div class="p-2 border-bottom border-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6>Mayank Agrawal</h6>
+                                    <p>NIT, Nagpur</p>
+                                </div>
+                                <p>
+                                    Status:
+                                    <span>Placed</span>
+                                </p>
+                            </div>
+                            <div>
+                                <span>DSA: 98%</span>
+                                <span class="mx-3">|</span>
+                                <span>WebD: 98%</span>
+                                <span class="mx-3">|</span>
+                                <span>React: 98%</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script src="/scripts/studentScripts.js"></script>
