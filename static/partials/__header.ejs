@@ -3,26 +3,30 @@
 <nav class="d-flex mb-3 justify-content-between align-items-center" style="height: 8vh;">
     <!-- navbar brand -->
     <div>
-        <a href="#" class="text-dark text-decoration-none mx-3 p-2 bg-warning rounded">Placement Cell</a>
+        <a href="/" class="text-dark text-decoration-none mx-3 p-2 bg-warning rounded">Placement Cell</a>
     </div>
 
     <!-- navbar links -->
     <div class="d-flex align-items-center">
+        <% if(locals.user){ %>
         <div>
-            <a href="#" class="text-light text-decoration-none mx-3">Sign In</a>
+            <a href="/interview" class="text-light text-decoration-none mx-3 navTab">Interviews</a>
         </div>
     
         <div>
-            <a href="#" class="text-light text-decoration-none mx-3">Sign Up</a>
+            <a href="/user/sign-out" class="text-light text-decoration-none ms-3 me-4 navTab">Sign Out</a>
+        </div>
+        <% } else{ %>
+        <div>
+            <a href="/user/sign-in" class="text-light text-decoration-none mx-3 navTab">Sign In</a>
         </div>
     
         <div>
-            <a href="#" class="text-light text-decoration-none mx-3">Interviews</a>
+            <a href="/user/sign-up" class="text-light text-decoration-none mx-3 navTab">Sign Up</a>
         </div>
+        <% } %>
     
-        <div>
-            <a href="#" class="text-light text-decoration-none ms-3 me-4">Sign Out</a>
-        </div>
+        
     </div>
     
 </nav>
