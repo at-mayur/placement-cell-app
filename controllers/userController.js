@@ -1,5 +1,5 @@
 const Employee = require("../models/employee");
-const prod = require("../env").production;
+const encrypt = require("../config/encryptPass");
 
 // sign up page controller
 module.exports.signUpController = function(req, res){
@@ -7,7 +7,9 @@ module.exports.signUpController = function(req, res){
         return res.redirect("/");
     }
 
-    return res.render("signup");
+    return res.render("signup", {
+        title: "Sign Up"
+    });
 };
 
 // sign in page controller
@@ -16,7 +18,9 @@ module.exports.signInController = function(req, res){
         return res.redirect("/");
     }
 
-    return res.render("signin");
+    return res.render("signin", {
+        title: "Sign In"
+    });
 };
 
 // login action controller
@@ -43,22 +47,8 @@ module.exports.createUser = async function(req, res){
 
         // if emp with given mail id does not exist
         if(!emp){
-            // create encrypted password for our user
-            let my_cipher = prod.cipher;
-            let encryptPass = "";
-            // action to be done on new string found
-            my_cipher.on("readable", () => {
-                let chunk = my_cipher.read();
-                while(chunk!=null){
-                    encryptPass += chunk.toString("hex");
-                    chunk = my_cipher.read();
-                }
-            });
-
-            // initiate encryption of our pass string
-            my_cipher.write(req.body.empPassword);
-            // end event
-            my_cipher.end();
+            
+            let encryptPass = encrypt.getEncryptedData(req.body.empPassword);
 
             // create new user
             await Employee.create({
@@ -95,6 +85,6 @@ module.exports.signOutController = function(req, res){
             });
         }
 
-        return res.redirect("/user/sign-in");
+        return res.redirect("/");
     });
 };

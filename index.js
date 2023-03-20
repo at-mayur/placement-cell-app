@@ -28,6 +28,9 @@ const app = express();
 // decalring app to use middleware to extract form data
 app.use(express.urlencoded());
 
+// decalring app to use middleware to extract raw data
+app.use(express.json());
+
 // Declaring static content path
 app.use(express.static(prod.STATIC_CONTENT));
 
@@ -46,6 +49,7 @@ app.set("layout extractScripts", true);
 app.use(expSession({
     name: "authenticatedUser",
     secret: prod.SESSION_KEY,
+    resave: false,
     saveUninitialized: false,
     cookie: {
         maxAge: 1000*60*10

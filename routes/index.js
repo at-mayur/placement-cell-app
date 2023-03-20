@@ -15,6 +15,15 @@ const router = express.Router();
 // passport checkAuthentication middleware declared while setting local strategy to check authentication
 router.get("/", passport.checkAuthentication, homeContorller.homeContorller);
 
+// route for create student
+router.post("/add-student", passport.checkAuthentication, homeContorller.createStudentController);
+
+// route for getting csv file
+router.get("/get-student-data", passport.checkAuthentication, homeContorller.studCsvDatacontroller);
+
+// route for jobs page
+router.get("/get-jobs/:id", homeContorller.jobsFetchController);
+
 router.use("/user", userRoutes);
 router.use("/interview", interviewRoutes);
 

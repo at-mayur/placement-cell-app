@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 
 const studentSchema = new mongoose.Schema({
-    stud_id: {
+    stud_email: {
         type: String,
         required: true,
         unique: true
@@ -39,7 +39,7 @@ const studentSchema = new mongoose.Schema({
     stud_status: {
         type: String,
         required: true,
-        enum: ["placed", "not-placed"]
+        enum: ["Placed", "Not Placed"]
     }
 }, { timestamps: true });
 

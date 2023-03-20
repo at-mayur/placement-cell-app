@@ -14,7 +14,7 @@
                 <h2 class="mt-4 mb-3 text-center">Create Interview</h2>
 
                 <!-- form element -->
-                <form action="" class="fs-6" method="post">
+                <form id="create-interview-form" action="/interview/create-interview" class="fs-6" method="post">
                     <!-- company name -->
                     <div class="mt-3">
                         <label class="form-label" for="comp-name">Company Name</label>
@@ -24,7 +24,7 @@
                     <!-- Interview Date -->
                     <div class="mt-3">
                         <label class="form-label" for="interview-date">Interview Date</label>
-                        <input type="datetime" id="interview-date" name="interviewDate" class="form-control">
+                        <input type="date" id="interview-date" name="interviewDate" class="form-control">
                     </div>
 
                     <!-- btn -->
@@ -38,200 +38,143 @@
         <div class="col-10 col-md-7 col-lg-8 mx-auto">
 
             <!-- Container for interviews -->
-            <div class="p-2 bg-white rounded-4 overflow" style="height: 85vh;">
-                <h2>Interviews</h2>
-
-                <!-- Interview Item -->
-                <div class="text-bg-light rounded-2 mb-2">
-                    <!-- Company name & date & Expand/collapse arrow -->
-                    <div class="d-flex justify-content-between align-items-center p-2">
-                        <div>
-                            <h4>XYZ pvt, Ltd</h4>
-                            <h6 class="text-secondary">12 Jul, 2022</h6>
-                            <!-- div to add student -->
-                            <div>
-                                <input type="hidden" id="interview-id" value="">
-                                <div class="mt-3">
-                                    <label class="form-label" for="stud-list">Add Student</label>
-                                    <!-- Student list to select from -->
-                                    <select id="stud-list" name="studAdd" class="form-select">
-                                        <option value="placed">
-                                            <div class="d-flex flex-column">
-                                                <p>Mayank Agrawal</p>
-                                                <p>
-                                                    (ID:
-                                                    <span>CN230820221</span>)
-                                                </p>
-                                            </div>
-                                        </option>
-                                    </select>
-                                </div>
-                                <button type="button" class="btn mt-2">Add</button>
-                            </div>
-                        </div>
-                        <div id="interview-expand" class="me-2">
-                            <i class="fa-solid fa-angle-right"></i>
-                        </div>
-                        <div id="interview-collapse" class="me-2 hidden">
-                            <i class="fa-solid fa-angle-down"></i>
-                        </div>
-                    </div>
-
-                    <!-- Div holding list of students for that interview -->
-                    <div id="interview-batch" class="hidden p-1">
-
-                        <!-- Student 1 -->
-                        <div class="p-2 border-bottom border-2">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <!-- Student name & College -->
-                                <div>
-                                    <h6>Mayank Agrawal</h6>
-                                    <p>NIT, Nagpur</p>
-                                </div>
-                                <!-- Student status -->
-                                <p>
-                                    Status:
-                                    <span>Placed</span>
-                                </p>
-                            </div>
-                            <div>
-                                <!-- Update result of interview for student -->
-                                <h6>Result</h6>
-                                <div>
-                                    <form action="" method="post">
-                                        <div class="d-flex flex-wrap">
-                                            <div class="form-check mx-2">
-                                                <input type="radio" id="stud-result-pass" name="studResult" class="form-check-input">
-                                                <label class="form-check-label" for="stud-result-pass">Pass</label>
-                                            </div>
-    
-                                            <div class="form-check mx-2">
-                                                <input type="radio" id="stud-result-fail" name="studResult" class="form-check-input">
-                                                <label class="form-check-label" for="stud-result-fail">Fail</label>
-                                            </div>
-    
-                                            <div class="form-check mx-2">
-                                                <input type="radio" id="stud-result-onHold" name="studResult" class="form-check-input">
-                                                <label class="form-check-label" for="stud-result-onHold">On Hold</label>
-                                            </div>
-    
-                                            <div class="form-check mx-2">
-                                                <input type="radio" id="stud-result-didNotAttempt" name="studResult" class="form-check-input">
-                                                <label class="form-check-label" for="stud-result-didNotAttempt">Didn't Attempt</label>
-                                            </div>
-    
-                                            <div class="form-check mx-2">
-                                                <input type="radio" id="stud-result-pending" name="studResult" class="form-check-input">
-                                                <label class="form-check-label" for="stud-result-pending">Pending</label>
-                                            </div>
-                                        </div>
-
-                                        <button type="button" class="btn mt-3">Update</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Student 2 -->
-                        <div class="p-2 border-bottom border-2">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h6>Mayank Agrawal</h6>
-                                    <p>NIT, Nagpur</p>
-                                </div>
-                                <p>
-                                    Status:
-                                    <span>Placed</span>
-                                </p>
-                            </div>
-                            <div>
-                                <h6>Result</h6>
-                                <div>
-                                    <form action="" method="post">
-                                        <div class="d-flex flex-wrap">
-                                            <div class="form-check mx-2">
-                                                <input type="radio" id="stud-result-pass" name="studResult" class="form-check-input">
-                                                <label class="form-check-label" for="stud-result-pass">Pass</label>
-                                            </div>
-    
-                                            <div class="form-check mx-2">
-                                                <input type="radio" id="stud-result-fail" name="studResult" class="form-check-input">
-                                                <label class="form-check-label" for="stud-result-fail">Fail</label>
-                                            </div>
-    
-                                            <div class="form-check mx-2">
-                                                <input type="radio" id="stud-result-onHold" name="studResult" class="form-check-input">
-                                                <label class="form-check-label" for="stud-result-onHold">On Hold</label>
-                                            </div>
-    
-                                            <div class="form-check mx-2">
-                                                <input type="radio" id="stud-result-didNotAttempt" name="studResult" class="form-check-input">
-                                                <label class="form-check-label" for="stud-result-didNotAttempt">Didn't Attempt</label>
-                                            </div>
-    
-                                            <div class="form-check mx-2">
-                                                <input type="radio" id="stud-result-pending" name="studResult" class="form-check-input">
-                                                <label class="form-check-label" for="stud-result-pending">Pending</label>
-                                            </div>
-                                        </div>
-
-                                        <button type="button" class="btn mt-3">Update</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Student 3 -->
-                        <div class="p-2 border-bottom border-2">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h6>Mayank Agrawal</h6>
-                                    <p>NIT, Nagpur</p>
-                                </div>
-                                <p>
-                                    Status:
-                                    <span>Placed</span>
-                                </p>
-                            </div>
-                            <div>
-                                <h6>Result</h6>
-                                <div>
-                                    <form action="" method="post">
-                                        <div class="d-flex flex-wrap">
-                                            <div class="form-check mx-2">
-                                                <input type="radio" id="stud-result-pass" name="studResult" class="form-check-input">
-                                                <label class="form-check-label" for="stud-result-pass">Pass</label>
-                                            </div>
-    
-                                            <div class="form-check mx-2">
-                                                <input type="radio" id="stud-result-fail" name="studResult" class="form-check-input">
-                                                <label class="form-check-label" for="stud-result-fail">Fail</label>
-                                            </div>
-    
-                                            <div class="form-check mx-2">
-                                                <input type="radio" id="stud-result-onHold" name="studResult" class="form-check-input">
-                                                <label class="form-check-label" for="stud-result-onHold">On Hold</label>
-                                            </div>
-    
-                                            <div class="form-check mx-2">
-                                                <input type="radio" id="stud-result-didNotAttempt" name="studResult" class="form-check-input">
-                                                <label class="form-check-label" for="stud-result-didNotAttempt">Didn't Attempt</label>
-                                            </div>
-    
-                                            <div class="form-check mx-2">
-                                                <input type="radio" id="stud-result-pending" name="studResult" class="form-check-input">
-                                                <label class="form-check-label" for="stud-result-pending">Pending</label>
-                                            </div>
-                                        </div>
-
-                                        <button type="button" class="btn mt-3">Update</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+            <div id="interviews-container" class="p-2 bg-white rounded-4 overflow" style="height: 85vh;">
+                
+                <div class="mb-3">
+                    <h2>Interviews</h2>
+                    <a class="btn btn-outline-success" href="/get-student-data">
+                        Download Student Data
+                        <i class="fa-solid fa-file-csv ms-2"></i>
+                    </a>
                 </div>
+
+                <% if(locals.interviews){ %>
+                    <% for(let interview of interviews){ %>
+
+                        <!-- Interview Item -->
+                        <div id="interview-item-<%= interview.id %>" class="text-bg-light rounded-2 my-2 interview-item">
+                            <!-- Company name & date & Expand/collapse arrow -->
+                            <div class="d-flex justify-content-between align-items-center p-2">
+                                <div>
+                                    <h4><%= interview.company.comp_name %></h4>
+                                    <h6 class="text-secondary"><%= interview.interview_date.toDateString() %></h6>
+                                    <!-- div to add student -->
+                                    <div>
+                                        <!-- Add student form -->
+                                        <form id="add-stud-form-<%= interview.id %>" action="/interview/add-student" method="post">
+
+                                            <input type="hidden" name="interviewId" value="<%= interview.id %>">
+                                            <div class="mt-3">
+                                                <label class="form-label" for="stud-list-<%= interview.id %>">Add Student</label>
+                                                <!-- Student list to select from -->
+                                                <select id="stud-list-<%= interview.id %>" name="studId" class="form-select">
+                                                    <% if(locals.students){ %>
+                                                        <% for(let stud of students){ %>
+                                                            <option value="<%= stud.id %>">
+                                                                <span><%= stud.stud_name %></span>
+                                                                <span>|</span>
+                                                                <span><%= stud.stud_email %></span>
+                                                            </option>
+                                                        <% } %>
+                                                    <% } %>
+                                                </select>
+                                            </div>
+                                            <button type="submit" class="btn mt-2">Add</button>
+
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- Expand btn -->
+                                <div id="interview-expand-<%= interview.id %>" class="me-2">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </div>
+                                <!-- collapse btn -->
+                                <div id="interview-collapse-<%= interview.id %>" class="me-2 hidden">
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                            </div>
+
+                            <!-- Div holding list of students for that interview -->
+                            <div id="interview-batch-<%= interview.id %>" class="hidden p-1">
+
+                                <% for(let stud of interview.students){ %>
+
+                                    <!-- Student -->
+                                    <div class="p-2 border-bottom border-2">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <!-- Student name & College -->
+                                            <div>
+                                                <h6><%= stud.student.stud_name %></h6>
+                                                <p><%= stud.student.stud_clg %></p>
+                                            </div>
+                                            <!-- Student status -->
+                                            <p>
+                                                Status:
+                                                <span id="student-<%= interview.id %>-<%= stud.student.id %>"><%= stud.student.stud_status %></span>
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <!-- Update result of interview for student -->
+                                            <h6>Result</h6>
+                                            <div>
+                                                <!-- Update result form -->
+                                                <form id="interview-result-<%= interview.id %>-<%= stud.student.id %>" class="stud-result-form" action="/interview/update-result" method="post">
+                                                    <input type="hidden" name="interviewId" value="<%= interview.id %>">
+                                                    <input type="hidden" name="studentId" value="<%= stud.student.id %>">
+                                                    <div class="d-flex flex-wrap">
+                                                        <div class="form-check mx-2">
+                                                            <input type="radio" id="pass-<%= interview.id %>-<%= stud.student.id %>"
+                                                             name="studResult" value="Pass"
+                                                             <% if(stud.result.result_stat == "Pass"){ %> checked <% } %>
+                                                             class="form-check-input">
+                                                            <label class="form-check-label" for="pass-<%= interview.id %>-<%= stud.student.id %>">Pass</label>
+                                                        </div>
+                
+                                                        <div class="form-check mx-2">
+                                                            <input type="radio" id="fail-<%= interview.id %>-<%= stud.student.id %>"
+                                                             <% if(stud.result.result_stat == "Fail"){ %> checked <% } %> 
+                                                             name="studResult" value="Fail" class="form-check-input">
+                                                            <label class="form-check-label" for="fail-<%= interview.id %>-<%= stud.student.id %>">Fail</label>
+                                                        </div>
+                
+                                                        <div class="form-check mx-2">
+                                                            <input type="radio" id="hold-<%= interview.id %>-<%= stud.student.id %>"
+                                                             <% if(stud.result.result_stat == "On Hold"){ %> checked <% } %>
+                                                             name="studResult" value="On Hold" class="form-check-input">
+                                                            <label class="form-check-label" for="hold-<%= interview.id %>-<%= stud.student.id %>">On Hold</label>
+                                                        </div>
+                
+                                                        <div class="form-check mx-2">
+                                                            <input type="radio" id="noAttempt-<%= interview.id %>-<%= stud.student.id %>"
+                                                             <% if(stud.result.result_stat == "Didn't Attempt"){ %> checked <% } %>
+                                                             name="studResult" value="Didn't Attempt" class="form-check-input">
+                                                            <label class="form-check-label" for="noAttempt-<%= interview.id %>-<%= stud.student.id %>">Didn't Attempt</label>
+                                                        </div>
+                
+                                                        <div class="form-check mx-2">
+                                                            <input type="radio" id="pending-<%= interview.id %>-<%= stud.student.id %>"
+                                                             <% if(stud.result.result_stat == "Pending"){ %> checked <% } %>
+                                                             name="studResult" value="Pending" class="form-check-input">
+                                                            <label class="form-check-label" for="pending-<%= interview.id %>-<%= stud.student.id %>">Pending</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <button type="submit" class="btn mt-3">Update</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <% } %>
+                                
+
+                            </div>
+                        </div>
+
+                    <% } %>
+                
+                <% } %>
+                
             </div>
 
         </div>

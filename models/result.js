@@ -20,7 +20,7 @@ const resultSchema = new mongoose.Schema({
     result_stat: {
         type: String,
         required: true,
-        enum: ["pass", "fail", "on hold", "did not attempt"]
+        enum: ["Pass", "Fail", "On Hold", "Didn't Attempt", "Pending"]
     }
 }, { timestamps: true });
 

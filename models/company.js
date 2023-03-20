@@ -13,6 +13,6 @@ const companySchema = new mongoose.Schema({
     
 }, { timestamps: true });
 
-const company = mongoose.model("Company", batchSchema);
+const company = mongoose.model("Company", companySchema);
 
 module.exports = company;

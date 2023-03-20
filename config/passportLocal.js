@@ -3,7 +3,8 @@ const passportLocal = require("passport-local").Strategy;
 
 const Employee = require("../models/employee");
 
-const prod = require("../env").production;
+// import encryption function
+const encrypt = require("./encryptPass");
 
 // Initiating passport with new local strategy
 passport.use(new passportLocal({
@@ -21,23 +22,9 @@ passport.use(new passportLocal({
             return done(null, false);
         }
 
-        // get cipher function
-        let my_cipher = prod.cipher;
-        let encryptPass = "";
+        // get encrypted password
+        let encryptPass = encrypt.getEncryptedData(password);
 
-        // store encrypted password in variable
-        my_cipher.on("readable", () => {
-            let chunk = my_cipher.read();
-            while(chunk!=null){
-                encryptPass += chunk.toString("hex");
-                chunk = my_cipher.read();
-            }
-        });
-
-        // initiate cipher func to encrypt pass
-        my_cipher.write(password);
-        // after it call end event
-        my_cipher.end();
 
         // if encrypted pass and password from db does not matches then return false
         if(emp.emp_password!=encryptPass){

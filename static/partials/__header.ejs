@@ -8,21 +8,25 @@
 
     <!-- navbar links -->
     <div class="d-flex align-items-center">
+        <!-- link to jobs page -->
+        <div>
+            <a href="/get-jobs/1" class="text-light text-decoration-none mx-2 navTab">Jobs</a>
+        </div>
         <% if(locals.user){ %>
         <div>
-            <a href="/interview" class="text-light text-decoration-none mx-3 navTab">Interviews</a>
+            <a href="/interview" class="text-light text-decoration-none mx-2 navTab">Interviews</a>
         </div>
     
         <div>
-            <a href="/user/sign-out" class="text-light text-decoration-none ms-3 me-4 navTab">Sign Out</a>
+            <a href="/user/sign-out" class="text-light text-decoration-none ms-2 me-4 navTab">Sign Out</a>
         </div>
         <% } else{ %>
         <div>
-            <a href="/user/sign-in" class="text-light text-decoration-none mx-3 navTab">Sign In</a>
+            <a href="/user/sign-in" class="text-light text-decoration-none mx-2 navTab">Sign In</a>
         </div>
     
         <div>
-            <a href="/user/sign-up" class="text-light text-decoration-none mx-3 navTab">Sign Up</a>
+            <a href="/user/sign-up" class="text-light text-decoration-none mx-2 navTab">Sign Up</a>
         </div>
         <% } %>
     
