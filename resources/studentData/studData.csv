@@ -1,13 +1,13 @@
 student_name,student_email,student_college,student_status,student_dsa_score,student_webD_score,student_react_score,interview_company,interview_date,interview_result_student
-Mayuresh Attarde,mayureshattarde@gmail.com,"GCOE, Jalgaon",Not Placed,94,97,99,"INFOSYS, PUNE",Thu Mar 30 2023,On Hold
-Mayuresh Attarde,mayureshattarde@gmail.com,"GCOE, Jalgaon",Not Placed,94,97,99,DELOITTE,Thu Mar 30 2023,On Hold
-Mayuresh Attarde,mayureshattarde@gmail.com,"GCOE, Jalgaon",Not Placed,94,97,99,DELOITTE,Fri Apr 28 2023,Pending
+Mayuresh Attarde,mayureshattarde@gmail.com,"GCOE, Jalgaon",Placed,94,97,99,"INFOSYS, PUNE",Thu Mar 30 2023,Pass
+Mayuresh Attarde,mayureshattarde@gmail.com,"GCOE, Jalgaon",Placed,94,97,99,DELOITTE,Thu Mar 30 2023,On Hold
+Mayuresh Attarde,mayureshattarde@gmail.com,"GCOE, Jalgaon",Placed,94,97,99,DELOITTE,Fri Apr 28 2023,Pending
 Shubham Patil,shubh12@xyz.com,"GCOE, Jalgaon",Placed,91,97,98,"TATA CONSULTANCY SERVICES, MUMBAI",Sat Apr 15 2023,Pass
 Shubham Patil,shubh12@xyz.com,"GCOE, Jalgaon",Placed,91,97,98,"INFOSYS, PUNE",Thu Mar 30 2023,On Hold
 Shripad Naik,shri24567@yah.com,"GCOE, Jalgaon",Placed,98,98,100,"TATA CONSULTANCY SERVICES, MUMBAI",Sat Apr 15 2023,Pass
 Shripad Naik,shri24567@yah.com,"GCOE, Jalgaon",Placed,98,98,100,"INFOSYS, PUNE",Thu Mar 30 2023,Pass
 Prashant,prashant3457@xyz.com,"Government College Of Engineering, Karad",Placed,98,98,100,"TATA CONSULTANCY SERVICES, MUMBAI",Sat Apr 15 2023,Pending
-Swapnil Jadhav,swap1789@jkl.com,VJTI,Not Placed,94,94,98,"TATA CONSULTANCY SERVICES, MUMBAI",Thu Mar 30 2023,On Hold
+Swapnil Jadhav,swap1789@jkl.com,VJTI,Not Placed,94,94,98,Not appeared for interview,NA,NA
 Pravin,pravin789@xyz.com,VJTI,Not Placed,85,85,78,"TATA CONSULTANCY SERVICES, MUMBAI",Sat Apr 15 2023,Didn't Attempt
 Dhiraj Chaudhari,daChaudhari234@xyz.com,"GCOE, Jalgaon",Placed,91,94,96,Not appeared for interview,NA,NA
 Chetan Chaudhari,cchetan345@xyz.com,"DNC, Jalgaon",Not Placed,78,78,80,Not appeared for interview,NA,NA
